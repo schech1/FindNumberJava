@@ -15,11 +15,11 @@ public class FindNumbers {
             String line;
             // read each line
             while ((line = br.readLine()) != null) {
-                // define the RegEx-Pattern (in this case d+: Digits with one or more occurences)
+                // define the RegEx-Pattern (in this case d+: Digits with one or more occurrences)
                 Pattern p = Pattern.compile("\\d+");
                 Matcher m = p.matcher(line);
 
-                //Iterate through every line until none available (m.find() == false)
+                //Iterate through every line until none available (m.find() = false)
                 while (m.find()) {
                     // Convert the matching patterns from String to Int for further processing
                     int numbersInLine = Integer.parseInt(m.group());
