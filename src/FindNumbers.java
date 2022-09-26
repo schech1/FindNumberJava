@@ -1,7 +1,7 @@
 // Import IO and Regex libs
 import java.io.*;
-        import java.util.regex.Matcher;
-        import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FindNumbers {
 
@@ -19,7 +19,7 @@ public class FindNumbers {
                 Pattern p = Pattern.compile("\\d+");
                 Matcher m = p.matcher(line);
 
-                //Iterate through every line until none available (m.find() = false)
+                //Iterate through every line and find digits that match the defined pattern
                 while (m.find()) {
                     // Convert the matching patterns from String to Int for further processing
                     int numbersInLine = Integer.parseInt(m.group());
@@ -29,7 +29,7 @@ public class FindNumbers {
                     // If true, output the line.
                     if (isAtLeastTen) {
                         System.out.println(line);
-                        //Break, in case the same String contains two or more matching numbers.
+                        //Break, in case the same string contains two or more matching numbers.
                         break;
                     }
                 }
